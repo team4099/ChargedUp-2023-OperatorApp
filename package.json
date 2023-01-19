@@ -10,6 +10,7 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "ntcore-ts-client": "^0.1.0-beta.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -51,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "tailwindcss": "^3.2.4"
   }
 }

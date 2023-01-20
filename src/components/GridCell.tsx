@@ -2,25 +2,24 @@ import { NetworkTablesTopic } from 'ntcore-ts-client'
 
 interface GridProps {
     message: string,
-    isCone?: boolean,
     topic: any
 }
 
 export function GridCell(props: GridProps){
 
-    if (props.isCone){
-        var color = "bg-yellow-200"
-    }
-    else {
+    if (["2", "5", "8"].includes(props.message[1])){
         var color = "bg-purple-200"
     }
+    else {
+        var color = "bg-yellow-200"
+    }
 
-    const setNT = ()=>{
+    const setNT = () => {
         console.log("setNT")
         props.topic(props.message)
     }
 
-    const releaseNT = ()=>{
+    const releaseNT = () => {
         console.log("releaseNT")
         props.topic("none")
     }

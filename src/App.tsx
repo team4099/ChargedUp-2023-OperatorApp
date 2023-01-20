@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
-	const grids: any[][] = [
-		[["3.1.1", true], ["3.1.2", false], ["3.2.3", true], ["3.2.1", true], ["3.2.2", false], ["3.2.3", true], ["3.3.1", true], ["133.2", false], ["3.3.3", true]],
-		[["2.1.1", true], ["2.1.2", false], ["2.2.3", true], ["2.2.1", true], ["2.2.2", false], ["2.2.3", true], ["2.3.1", true], ["123.2", false], ["2.3.3", true]],
-		[["1.1.1", true], ["1.1.2", false], ["1.2.3", true], ["1.2.1", true], ["1.2.2", false], ["1.2.3", true], ["1.3.1", true], ["1.3.2", false], ["1.3.3", true]]
+	const grids: String[][] = [
+		["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9"],
+		["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"],
+		["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
 	]
 
 	const [getNTCode, setNTCore] = useState(NetworkTables.createInstanceByURI("192.168.237.99", 5810))
@@ -56,7 +56,7 @@ function App() {
 											<tr>
 												{grid.map(node => (
 													<td className="whitespace-nowrap text-sm font-medium text-gray-800">
-														<GridCell message={node[0]} isCone={node[1]} topic={setTopic}/>
+														<GridCell message={node[0]} topic={setTopic}/>
 													</td>
 												))}
 											</tr>

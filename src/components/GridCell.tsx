@@ -1,16 +1,16 @@
 import { NetworkTablesTopic } from 'ntcore-ts-client'
 
 interface GridProps {
-    message: string,
+    message: String,
     topic: any
 }
 
 export function GridCell(props: GridProps){
 
-    if (["2", "5", "8"].includes(props.message[1])){
+    if (["2", "5", "8"].includes(props.message[1]) || props.message.includes("Single")){
         var color = "bg-purple-200"
     }
-    else {
+    else { // please comment code
         var color = "bg-yellow-200"
     }
 
